@@ -17,25 +17,9 @@ function SportIllustration() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute top-5 left-5 flex items-center gap-2 rounded-2xl bg-white/95 border border-slate-200 shadow-md px-3 py-2">
-          <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center">
-            <Timer className="w-4 h-4 text-sky-600" />
-          </div>
-          <div>
-            <div className="text-[11px] text-slate-400 leading-none">Temps</div>
-            <div className="text-sm font-bold text-slate-900 leading-none mt-1">09.58 s</div>
-          </div>
-        </div>
+      
 
-        <div className="absolute bottom-5 right-5 flex items-center gap-2 rounded-2xl bg-white/95 border border-slate-200 shadow-md px-3 py-2">
-          <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
-            <TrendingUp className="w-4 h-4 text-emerald-600" />
-          </div>
-          <div>
-            <div className="text-[11px] text-slate-400 leading-none">Talents suivis</div>
-            <div className="text-sm font-bold text-slate-900 leading-none mt-1">120+</div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
@@ -51,10 +35,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
           <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-            <p className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
-              <Sparkles className="w-4 h-4" />
-              Projet national de digitalisation
-            </p>
+           
 
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
               La plateforme nationale du{" "}

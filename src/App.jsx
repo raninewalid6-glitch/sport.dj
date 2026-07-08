@@ -12,6 +12,7 @@ const pillars = [
     icon: Database,
     tone: "sky",
     title: "Plateforme nationale Sport.dj",
+    image: "/sport-2.webp",
     forces: [
       "Centralisation des données (athlètes, clubs, fédérations, infrastructures).",
       "Simplification des procédures administratives (licences, inscriptions, subventions).",
@@ -24,29 +25,13 @@ const pillars = [
     ],
     why: "Sans plateforme, les données restent dispersées et difficiles à exploiter. La numérisation garantit une gouvernance moderne et efficace.",
   },
-  {
-    id: "performances",
-    icon: Activity,
-    tone: "emerald",
-    title: "Système de suivi des performances",
-    forces: [
-      "Collecte de statistiques précises (temps, scores, santé, progression).",
-      "Tableaux de bord pour entraîneurs et décideurs.",
-      "Détection des talents grâce à l'intelligence artificielle.",
-    ],
-    opportunites: [
-      "Valoriser les athlètes djiboutiens sur la scène régionale et internationale.",
-      "Orienter les politiques sportives avec des données fiables.",
-      "Améliorer la préparation des compétitions.",
-    ],
-    why: "Les performances ne doivent plus être évaluées uniquement à l'œil. Les données numériques permettent une analyse scientifique et objective.",
-    reversed: true,
-  },
+  
   {
     id: "formation",
     icon: GraduationCap,
     tone: "violet",
     title: "Plateforme de formation et certification",
+    image: "/sport-3.jpg",
     forces: [
       "Formation en ligne accessible partout.",
       "Gestion numérique des diplômes et certifications.",
@@ -60,10 +45,11 @@ const pillars = [
     why: "La formation traditionnelle est limitée par le temps et l'espace. La numérisation démocratise l'accès et assure une traçabilité des compétences.",
   },
   {
-    id: "cybersecurite",
+    id: "e-sport",
     icon: ShieldCheck,
     tone: "indigo",
-    title: "Cybersécurité et protection des données",
+    title: "e-sport et protection des données",
+    image: "/sport-4.webp",
     forces: [
       "Protection des données sensibles (santé, identité, résultats).",
       "Création d'un Centre de cybersécurité du sport en partenariat avec l'ANSIE.",
@@ -81,6 +67,7 @@ const pillars = [
     icon: Smartphone,
     tone: "amber",
     title: "Innovation et inclusion numérique",
+    image: "/sport-5.webp",
     forces: [
       "Applications mobiles pour inscriptions et suivi des compétitions.",
       "Outils numériques pour promouvoir le sport féminin et scolaire.",

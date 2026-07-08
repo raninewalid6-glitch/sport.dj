@@ -40,6 +40,7 @@ export default function FeaturePillar({
   icon: Icon,
   title,
   tone = "sky",
+  image="/sport-2.webp",
   forces,
   opportunites,
   why,
@@ -54,16 +55,44 @@ export default function FeaturePillar({
     >
       <div className={`max-w-6xl mx-auto grid gap-10 lg:grid-cols-2 lg:items-center ${reversed ? "lg:[&>*:first-child]:order-2" : ""}`}>
         <div>
-          <div className="flex items-center gap-4 mb-6">
-            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${styles.icon}`}>
-              <Icon className="w-7 h-7" />
-            </div>
-            <span className={`w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold ${styles.badge}`}>
-              {index}
-            </span>
-          </div>
+          {image && (
+            <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/3] shadow-lg border border-slate-200">
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
-          <h3 className="text-2xl sm:text-3xl font-black text-slate-900">{title}</h3>
+              <div className="absolute top-4 left-4 flex items-center gap-3 rounded-2xl bg-white/95 backdrop-blur-sm shadow-md px-3 py-2">
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${styles.icon}`}>
+                  <Icon className="w-5 h-5" />
+                </div>
+                <span className={`w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold ${styles.badge}`}>
+                  {index}
+                </span>
+              </div>
+
+              <h3 className="absolute bottom-4 left-4 right-4 text-xl sm:text-2xl font-black text-white drop-shadow-md">
+                {title}
+              </h3>
+            </div>
+          )}
+
+          {!image && (
+            <>
+              <div className="flex items-center gap-4 mb-6">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${styles.icon}`}>
+                  <Icon className="w-7 h-7" />
+                </div>
+                <span className={`w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold ${styles.badge}`}>
+                  {index}
+                </span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900">{title}</h3>
+            </>
+          )}
 
           <div className={`mt-6 rounded-2xl border p-5 ${styles.quote}`}>
             <div className="flex gap-3">
