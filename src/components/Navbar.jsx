@@ -6,7 +6,7 @@ const navLinks = [
   { href: "#plateforme", label: "Plateforme" },
   { href: "#performances", label: "Performances" },
   { href: "#formation", label: "Formation" },
-  { href: "#cybersecurite", label: "Cybersécurité" },
+  { href: "#cybersecurite", label: "e-sport" },
   { href: "#innovation", label: "Innovation" },
 ];
 

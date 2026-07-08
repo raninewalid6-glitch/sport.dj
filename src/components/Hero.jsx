@@ -9,26 +9,13 @@ const stats = [
 
 function SportIllustration() {
   return (
-    <div className="relative w-full max-w-md mx-auto lg:mx-0">
+    <div className="relative w-full max-w-lg mx-auto lg:mx-0">
       <div className="relative rounded-[2rem] border border-slate-200 bg-white shadow-xl overflow-hidden aspect-square">
-        <svg viewBox="0 0 400 400" className="w-full h-full" role="img" aria-label="Illustration d'un athlète sur une piste">
-          <defs>
-            <linearGradient id="trackGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#0284c7" />
-              <stop offset="100%" stopColor="#10b981" />
-            </linearGradient>
-          </defs>
-          <rect width="400" height="400" fill="#f8fafc" />
-          <circle cx="200" cy="200" r="170" fill="url(#trackGrad)" opacity="0.08" />
-          <circle cx="200" cy="200" r="130" fill="none" stroke="url(#trackGrad)" strokeWidth="18" opacity="0.18" />
-          <circle cx="200" cy="200" r="130" fill="none" stroke="url(#trackGrad)" strokeWidth="18" strokeDasharray="180 620" strokeLinecap="round" />
-
-          {/* Silhouette coureur stylisée */}
-          <g transform="translate(120,110)" fill="url(#trackGrad)">
-            <circle cx="72" cy="14" r="14" />
-            <path d="M60 34c8 0 14 6 16 14l8 30 26 14-6 14-32-16-10-22-8 20 14 40-16 6-18-46 2-24-18 10-14 26-14-8 18-34c4-8 12-14 22-16z" />
-          </g>
-        </svg>
+        <img
+          src="/sport.webp"
+          alt="Illustration du sport djiboutien"
+          className="w-full h-full object-cover"
+        />
 
         <div className="absolute top-5 left-5 flex items-center gap-2 rounded-2xl bg-white/95 border border-slate-200 shadow-md px-3 py-2">
           <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center">
@@ -64,7 +51,10 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
           <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-           
+            <p className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
+              <Sparkles className="w-4 h-4" />
+              Projet national de digitalisation
+            </p>
 
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
               La plateforme nationale du{" "}
