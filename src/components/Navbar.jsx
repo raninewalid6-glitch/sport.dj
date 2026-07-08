@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import AuthModal from "./AuthModal";
 
 const navLinks = [
   { href: "#plateforme", label: "Plateforme" },
@@ -11,8 +12,15 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [authModal, setAuthModal] = useState(null); // null | "login" | "register"
+
+  const openAuth = (tab) => {
+    setIsOpen(false);
+    setAuthModal(tab);
+  };
 
   return (
+    <>
     <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -38,12 +46,18 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="#conclusion"
+            <button
+              onClick={() => openAuth("login")}
+              className="px-4 py-2.5 text-sm font-semibold text-slate-600 hover:text-sky-600 transition"
+            >
+              Connexion
+            </button>
+            <button
+              onClick={() => openAuth("register")}
               className="px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-600 to-emerald-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-sky-500/30 transition"
             >
-              Découvrir la vision
-            </a>
+              Inscription
+            </button>
           </div>
 
           <button
@@ -67,16 +81,31 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#conclusion"
-              onClick={() => setIsOpen(false)}
-              className="block mt-2 px-2 py-2.5 text-sm font-semibold text-sky-600"
-            >
-              Découvrir la vision →
-            </a>
+            <div className="mt-3 pt-3 border-t border-slate-200 flex items-center gap-3 px-2">
+              <button
+                onClick={() => openAuth("login")}
+                className="flex-1 py-2.5 rounded-full border border-slate-300 text-sm font-semibold text-slate-700"
+              >
+                Connexion
+              </button>
+              <button
+                onClick={() => openAuth("register")}
+                className="flex-1 py-2.5 rounded-full bg-gradient-to-r from-sky-600 to-emerald-500 text-white text-sm font-semibold"
+              >
+                Inscription
+              </button>
+            </div>
           </nav>
         )}
       </div>
     </header>
+
+    <AuthModal
+      key={authModal ?? "closed"}
+      open={authModal !== null}
+      initialTab={authModal ?? "login"}
+      onClose={() => setAuthModal(null)}
+    />
+    </>
   );
 }
