@@ -46,12 +46,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={() => openAuth("login")}
-              className="px-4 py-2.5 text-sm font-semibold text-slate-600 hover:text-sky-600 transition"
-            >
-              Connexion
-            </button>
+           
             <button
               onClick={() => openAuth("register")}
               className="px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-600 to-emerald-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-sky-500/30 transition"
